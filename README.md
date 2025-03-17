@@ -42,17 +42,11 @@ Each image is an RGB image (3 channels), and the labels are stored as numerical 
 
 ---
 
-Now, your images will appear **smaller and neatly arranged** in the README. 🚀 Let me know if you need any modifications! 😊
-
 
 ## **Requirements**  
 Before running the script, install the required dependencies:  
 
-```bash
-pip install -r requirements.txt
-```
-
-Alternatively, install manually:  
+Install manually:  
 ```bash
 pip install tensorflow matplotlib numpy
 ```
