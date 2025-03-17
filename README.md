@@ -15,34 +15,60 @@ This project implements a **Convolutional Neural Network (CNN)** using **TensorF
 
 ---
 
+# **CNN Image Classification using CIFAR-10 Dataset**  
+
+## **Overview**  
+This project implements a **Convolutional Neural Network (CNN)** using **TensorFlow and Keras** to classify images from the **CIFAR-10 dataset**. The dataset consists of **60,000 images** belonging to **10 different categories** such as airplanes, automobiles, birds, cats, etc. The model is trained to recognize and classify these images with high accuracy.  
+
+---
+
 ## **Dataset**  
 The CIFAR-10 dataset contains **60,000 images** of **size 32x32 pixels** in **10 classes**:  
+
 | Class Label  | Example Image  |
 |-------------|---------------|
-| **Airplane** | ![Airplane](![Screenshot 2025-03-17 181052](https://github.com/user-attachments/assets/36bc0363-cc19-4378-92fb-60a60f239867)
-) |
-| **Automobile** | ![Automobile](![Screenshot 2025-03-17 180845](https://github.com/user-attachments/assets/23438360-1403-418b-b802-b174837c415c)
-) |
-| **Bird** | ![Bird](![Screenshot 2025-03-17 180859](https://github.com/user-attachments/assets/0ca22179-faf1-4c65-97ea-1b3542904360)
-) |
-| **Cat** | ![Cat](![Screenshot 2025-03-17 180921](https://github.com/user-attachments/assets/44c9472f-424a-4a41-856f-524a5a52de51)
-) |
-| **Deer** | ![Deer](![Screenshot 2025-03-17 181036](https://github.com/user-attachments/assets/24f17204-5a22-40ef-8e76-08040e0425b8)
-) |
-| **Dog** | ![Dog](![Screenshot 2025-03-17 181425](https://github.com/user-attachments/assets/69b3f8f6-2546-4ffc-92e7-6a7eb3c80b8b)
-) |
-| **Frog** | ![Frog](![Screenshot 2025-03-17 180818](https://github.com/user-attachments/assets/4a4b0cc1-f612-479a-977a-3fc84918a2e2)
-) |
-| **Horse** | ![Horse](![Screenshot 2025-03-17 180909](https://github.com/user-attachments/assets/266778fc-ea84-4b92-9661-a809be22f456)
-) |
-| **Ship** | ![Ship](![Screenshot 2025-03-17 181625](https://github.com/user-attachments/assets/65b3fff0-d1f9-4b76-a0f8-1ff8df091c1f)
-) |
-| **Truck** | ![Truck](![Screenshot 2025-03-17 180831](https://github.com/user-attachments/assets/15b1f145-3ede-43c4-a667-c8c5e6664090)
-) |
+| **Airplane** | <img src="https://github.com/user-attachments/assets/36bc0363-cc19-4378-92fb-60a60f239867" width="100"> |
+| **Automobile** | <img src="https://github.com/user-attachments/assets/23438360-1403-418b-b802-b174837c415c" width="100"> |
+| **Bird** | <img src="https://github.com/user-attachments/assets/0ca22179-faf1-4c65-97ea-1b3542904360" width="100"> |
+| **Cat** | <img src="https://github.com/user-attachments/assets/44c9472f-424a-4a41-856f-524a5a52de51" width="100"> |
+| **Deer** | <img src="https://github.com/user-attachments/assets/24f17204-5a22-40ef-8e76-08040e0425b8" width="100"> |
+| **Dog** | <img src="https://github.com/user-attachments/assets/69b3f8f6-2546-4ffc-92e7-6a7eb3c80b8b" width="100"> |
+| **Frog** | <img src="https://github.com/user-attachments/assets/4a4b0cc1-f612-479a-977a-3fc84918a2e2" width="100"> |
+| **Horse** | <img src="https://github.com/user-attachments/assets/266778fc-ea84-4b92-9661-a809be22f456" width="100"> |
+| **Ship** | <img src="https://github.com/user-attachments/assets/65b3fff0-d1f9-4b76-a0f8-1ff8df091c1f" width="100"> |
+| **Truck** | <img src="https://github.com/user-attachments/assets/15b1f145-3ede-43c4-a667-c8c5e6664090" width="100"> |
 
 Each image is an RGB image (3 channels), and the labels are stored as numerical values from **0 to 9**, corresponding to the classes listed above.  
 
 ---
+
+## **How to Add Images?**  
+1. Save **sample images** using the following Python script:
+    ```python
+    import matplotlib.pyplot as plt
+    from tensorflow.keras import datasets
+
+    # Load dataset
+    (x_train, y_train), (_, _) = datasets.cifar10.load_data()
+
+    # CIFAR-10 class labels
+    labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 
+              'dog', 'frog', 'horse', 'ship', 'truck']
+
+    # Save sample images
+    for i in range(10):
+        plt.imshow(x_train[i])
+        plt.axis('off')
+        plt.savefig(f'samples/{labels[y_train[i][0]]}.png', dpi=100)  # Save with class name
+    ```
+
+2. Upload the images to your **GitHub repository** (preferably in a `samples/` folder).
+3. Replace the **image URLs** in the `<img>` tags with the new links from GitHub.
+
+---
+
+Now, your images will appear **smaller and neatly arranged** in the README. 🚀 Let me know if you need any modifications! 😊
+
 
 ## **Requirements**  
 Before running the script, install the required dependencies:  
