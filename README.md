@@ -42,31 +42,6 @@ Each image is an RGB image (3 channels), and the labels are stored as numerical 
 
 ---
 
-## **How to Add Images?**  
-1. Save **sample images** using the following Python script:
-    ```python
-    import matplotlib.pyplot as plt
-    from tensorflow.keras import datasets
-
-    # Load dataset
-    (x_train, y_train), (_, _) = datasets.cifar10.load_data()
-
-    # CIFAR-10 class labels
-    labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 
-              'dog', 'frog', 'horse', 'ship', 'truck']
-
-    # Save sample images
-    for i in range(10):
-        plt.imshow(x_train[i])
-        plt.axis('off')
-        plt.savefig(f'samples/{labels[y_train[i][0]]}.png', dpi=100)  # Save with class name
-    ```
-
-2. Upload the images to your **GitHub repository** (preferably in a `samples/` folder).
-3. Replace the **image URLs** in the `<img>` tags with the new links from GitHub.
-
----
-
 Now, your images will appear **smaller and neatly arranged** in the README. 🚀 Let me know if you need any modifications! 😊
 
 
