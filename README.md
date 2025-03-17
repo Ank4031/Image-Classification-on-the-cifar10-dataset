@@ -17,16 +17,18 @@ This project implements a **Convolutional Neural Network (CNN)** using **TensorF
 
 ## **Dataset**  
 The CIFAR-10 dataset contains **60,000 images** of **size 32x32 pixels** in **10 classes**:  
-1. Airplane  
-2. Automobile  
-3. Bird  
-4. Cat  
-5. Deer  
-6. Dog  
-7. Frog  
-8. Horse  
-9. Ship  
-10. Truck  
+| Class Label  | Example Image  |
+|-------------|---------------|
+| **Airplane** | ![Airplane](samples/airplane.png) |
+| **Automobile** | ![Automobile](samples/automobile.png) |
+| **Bird** | ![Bird](samples/bird.png) |
+| **Cat** | ![Cat](samples/cat.png) |
+| **Deer** | ![Deer](samples/deer.png) |
+| **Dog** | ![Dog](samples/dog.png) |
+| **Frog** | ![Frog](samples/frog.png) |
+| **Horse** | ![Horse](samples/horse.png) |
+| **Ship** | ![Ship](samples/ship.png) |
+| **Truck** | ![Truck](samples/truck.png) |
 
 Each image is an RGB image (3 channels), and the labels are stored as numerical values from **0 to 9**, corresponding to the classes listed above.  
 
